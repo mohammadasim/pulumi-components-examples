@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "examples"
+version = "0.1.0"
+description = ""
+authors = ["Mohammad Ayub <asimayub81@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pulumi = "^3.50.2"
+pulumi-aws = "^5.25.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,6 @@
+name: rds-instance-example
+runtime:
+  name: python
+  options:
+    virtualenv: <path to my venv>
+description: A minimal AWS Python Pulumi program
