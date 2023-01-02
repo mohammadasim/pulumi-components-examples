@@ -23,4 +23,5 @@ vpc = Vpc(
     private_subnets,
     ha_nat=False,
 )
+pulumi.export("vpc_id", vpc.vpc.id)
 
