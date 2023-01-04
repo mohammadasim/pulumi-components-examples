@@ -7,8 +7,9 @@ config:
     availability_zone: eu-west-1a
     backup_window: 02:00-03:00
     db_name: pulumi
-    engine: postgresql
+    engine: postgres
     engine_version: 13.7
+    family: postgres13
     instance_class: db.t3.micro
     maintenance_window: sun:03:00-sun:05:00
     multi_az: false
