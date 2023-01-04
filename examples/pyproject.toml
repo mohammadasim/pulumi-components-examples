@@ -11,6 +11,11 @@ pulumi = "^3.50.2"
 pulumi-aws = "^5.25.0"
 
 
+[tool.poetry.group.dev.dependencies]
+isort = "^5.11.4"
+black = "^22.12.0"
+flake8 = "^6.0.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

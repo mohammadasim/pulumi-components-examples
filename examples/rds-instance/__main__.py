@@ -1,10 +1,9 @@
 """An AWS Python Pulumi program"""
 
 import pulumi
-from pulumi_components.aws.utils import register_tags
-from pulumi_components.aws.components.vpc import Vpc, VpcSubnetArgs
 from pulumi_components.aws.components.rds import RDSInstance
-
+from pulumi_components.aws.components.vpc import Vpc, VpcSubnetArgs
+from pulumi_components.aws.utils import register_tags
 
 # register tags
 register_tags()
@@ -13,8 +12,12 @@ conf = pulumi.Config()
 vpc_conf = conf.get_object("vpc")
 env = pulumi.get_stack().split(".")[1]
 
-public_subnets = [VpcSubnetArgs(**subnet) for subnet in vpc_conf.get("public_subnets")]
-private_subnets = [VpcSubnetArgs(**subnet) for subnet in vpc_conf.get("private_subnets")]
+public_subnets = [
+    VpcSubnetArgs(**subnet) for subnet in vpc_conf.get("public_subnets")
+]  # noqa E501
+private_subnets = [
+    VpcSubnetArgs(**subnet) for subnet in vpc_conf.get("private_subnets")
+]  # noqa E501
 
 # Create VPC
 vpc = Vpc(
@@ -39,8 +42,7 @@ rds_instance = RDSInstance(
     vpc.vpc.id,
     db_name=rds_conf.get("db_name"),
     ingress_security_group_cidrs=[vpc.vpc.cidr_block],
-    subnet_ids=vpc.private_subnet_ids
+    subnet_ids=vpc.private_subnet_ids,
 )
 
 pulumi.export("vpc_id", vpc.vpc.id)
-

@@ -2,5 +2,5 @@ name: rds-instance-example
 runtime:
   name: python
   options:
-    virtualenv: <path to my venv>
+    virtualenv: /home/asim/.cache/pypoetry/virtualenvs/examples-7M_qWPLC-py3.10
 description: A minimal AWS Python Pulumi program
