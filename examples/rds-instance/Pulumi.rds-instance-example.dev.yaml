@@ -2,6 +2,19 @@ secretsprovider: awskms://083acee6-338c-4cea-abe2-a153620fd824
 encryptedkey: AQICAHjJLQAIZ1PpgJD8E+7cWBPGx0wLWloFQfjBefj/9Np1JgGGV7gOSR+jT6rnyOMiWvOPAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMlBbKdHk0FrP8ZwtaAgEQgDtND86Ukl5xwqnrU9TQ3wNWVY0bIG7nWjvyCdD7jurHQbCJwlWx3EyF+A9s/jhUoCffzJGgwpnY20umpg==
 config:
   aws:region: eu-west-1
+  rds-instance-example:rds:
+    allocated_storage: 10
+    availability_zone: eu-west-1a
+    backup_window: 02:00-03:00
+    db_name: pulumi
+    engine: postgresql
+    engine_version: 13.7
+    instance_class: db.t3.micro
+    maintenance_window: sun:03:00-sun:05:00
+    multi_az: false
+    password:
+      secure: v1:KvA+AV9XqhaWbwIf:YHkK5m8hA/DanEXsOYh7o4sB9v88ONivKGhKkcoiEJER3S4Ff+HJOWk=
+    username: pulumi
   rds-instance-example:tags:
     "com:project": "rds-instance-example"
     "com:stack": "dev"
