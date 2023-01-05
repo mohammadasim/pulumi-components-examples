@@ -7,7 +7,7 @@ config:
     engine_version: 12.6
     family: aurora-postgresql12
     instances:
-      - instance_class: db.t3.micro
+      - instance_class: db.t3.medium
         name: instance-1
     master_password:
       secure: v1:MnfLotgL5gqhgeyT:N75mGki87u/tD+xmGQYZxkOVu7PoQHVFWERb/0+4BJqdR8G8
