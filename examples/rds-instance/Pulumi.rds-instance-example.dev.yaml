@@ -2,6 +2,16 @@ secretsprovider: awskms://083acee6-338c-4cea-abe2-a153620fd824
 encryptedkey: AQICAHjJLQAIZ1PpgJD8E+7cWBPGx0wLWloFQfjBefj/9Np1JgGGV7gOSR+jT6rnyOMiWvOPAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMlBbKdHk0FrP8ZwtaAgEQgDtND86Ukl5xwqnrU9TQ3wNWVY0bIG7nWjvyCdD7jurHQbCJwlWx3EyF+A9s/jhUoCffzJGgwpnY20umpg==
 config:
   aws:region: eu-west-1
+  rds-instance-example:aurora:
+    engine: aurora-postgresql
+    engine_version: 12.6
+    family: aurora-postgresql12
+    instances:
+      - instance_class: db.t3.micro
+        name: instance-1
+    master_password:
+      secure: v1:MnfLotgL5gqhgeyT:N75mGki87u/tD+xmGQYZxkOVu7PoQHVFWERb/0+4BJqdR8G8
+    master_username: postgres
   rds-instance-example:rds:
     allocated_storage: 10
     availability_zone: eu-west-1a
