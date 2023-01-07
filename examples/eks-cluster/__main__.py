@@ -33,7 +33,7 @@ admin_role = create_iam_role(
     "eksClusterRole",
     "Amazon EKS - Cluster role",
     "eks.amazonaws.com",
-    managed_policies_arn=["arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"]
+    managed_policies_arn=["arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"],
 )
 
 # Crate eks cluster
@@ -41,7 +41,6 @@ cluster = EksCluster(
     f"{env}-eks-cluster",
     admin_role.arn,
     vpc.private_subnet_ids,
-    vpc.vpc.id,
     "1.24",
 )
 # Export the name of the bucket
