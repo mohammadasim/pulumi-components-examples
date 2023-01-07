@@ -1,4 +1,4 @@
 .idea
 rds-instance/Pulumi.yaml
 .vscode
-__pycache__
+*/__pycache__/

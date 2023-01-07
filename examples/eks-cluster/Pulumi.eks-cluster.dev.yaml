@@ -1,0 +1,4 @@
+secretsprovider: awskms://083acee6-338c-4cea-abe2-a153620fd824
+encryptedkey: AQICAHjJLQAIZ1PpgJD8E+7cWBPGx0wLWloFQfjBefj/9Np1JgFpTtUVDgNravmqKP08JKgbAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMZI6nRwkU8d3DwyAGAgEQgDsRYWARV1tEWwblUbS9PxpDEAa+YyN+L6iKkDSzrsAbZ7Kr1R9o3brf87Vf6BZCcwI0QTSUVG5/xdYa7Q==
+config:
+  aws:region: eu-west-1
