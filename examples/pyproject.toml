@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 pulumi = "^3.50.2"
 pulumi-aws = "^5.25.0"
+pulumi-kubernetes = "^3.23.1"
 
 
 [tool.poetry.group.dev.dependencies]
